@@ -1,0 +1,24 @@
+
+DECLARE
+    vename  VARCHAR2(20);
+    vsal    NUMBER;
+    vcomm   NUMBER;
+    vnetsal NUMBER;
+
+BEGIN
+    vename := UPPER('&ename');
+
+    SELECT empno, ename, sal, comm
+    INTO vsal, vcomm
+    FROM emp
+    WHERE ename = vename;
+
+    vnetsal := vsal + vcomm;
+
+    DBMS_OUTPUT.PUT_LINE('Employee Name : ' || vename);
+    DBMS_OUTPUT.PUT_LINE('Salary        : ' || vsal);
+    DBMS_OUTPUT.PUT_LINE('Commission    : ' || vcomm);
+    DBMS_OUTPUT.PUT_LINE('Net Salary    : ' || vnetsal);
+
+END;
+/
