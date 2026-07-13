@@ -1,0 +1,5 @@
+class{
+int sal;
+int userid;
+string comName;
+}
