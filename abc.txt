@@ -1,0 +1,5 @@
+class students{
+int StudentId;
+String studentname;
+double stuMarks;
+}
